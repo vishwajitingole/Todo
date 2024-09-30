@@ -28,6 +28,9 @@ public class TodoDAO {
 			pst.setString(3, status);
 			int i=pst.executeUpdate();
 			if(i==1) {
+				//It will return only 1 or 0. 
+				//0 if their is Data Manipulation takes place in DB
+				// 1 if their are changes
 				f=true;
 			}
 		} catch (Exception e) {

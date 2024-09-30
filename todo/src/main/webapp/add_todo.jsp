@@ -7,7 +7,7 @@
 <title>Add Todo</title>
 <%@include file="components/bootstrap.jsp"%>
 </head>
-<body style="background-style: #F0f1f2;">
+<body class="bg-secondary" style="background-style: #F0f1f2;">
 	<%@include file="components/navbar.jsp"%>
 
 
@@ -23,13 +23,11 @@
 								<label for="exampleInputEmail1">Name</label> <input type="text"
 									class="form-control" id="exampleInputEmail1"
 									aria-describedby="emailHelp" placeholder="Aapka Naam" name="username">
-
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Todo</label> <input type="text"
 									class="form-control" id="exampleInputEmail1"
 									aria-describedby="emailHelp" placeholder="Enter your Task..." name="todo">
-
 							</div>
 							<div class="form-group ">
 								<label for="inputState">Status</label> <select type="text"

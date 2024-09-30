@@ -14,7 +14,10 @@
 </head>
 <body class="bg-light">
 
-<%  Connection conn=DBConnect.getConn(); 
+<% 
+
+//Just to check if the DB is connected to Jsp
+Connection conn=DBConnect.getConn(); 
 out.print(conn);
 %>
 

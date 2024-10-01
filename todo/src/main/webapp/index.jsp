@@ -70,7 +70,7 @@ out.print(conn);
 					<td scope="row"><%= t.getName() %></td>
 					<td><%=t.getTodo() %></td>
 					<td>
-						<a href="edit?id=<%=t.getId()%>" class="btn btn-sm btn-success">Edit</a>	
+						<a href="edit.jsp?id=<%=t.getId()%>" class="btn btn-sm btn-success">Edit</a>	
 							<a href="" class="btn btn-sm btn-danger">Delete</a>	
 					</td>
 				</tr>

@@ -68,5 +68,30 @@ public class TodoDAO {
 		
 		return list;
 	}
+	
+	public TodoDetails getTodoById(int id) {
+		TodoDetails t=null;
+		
+		
+		try {
+			String sql="select * from todo where id=?";
+			PreparedStatement pst=conn.prepareStatement(sql);
+			pst.setInt(1,id); 
+			ResultSet rs=pst.executeQuery();
+			
+			while(rs.next()) {
+				t=new TodoDetails();
+				t.setId(rs.getInt(1));
+				t.setName(rs.getString(2));
+				t.setStatus(rs.getString(3));
+				t.setTodo(rs.getString(4));
+			}
+		} catch (Exception e) {
+			
+		}
+		
+		
+		return t;
+	}
 
 }

@@ -54,9 +54,9 @@ public class TodoDAO {
 			while(rs.next()) {
 				t=new TodoDetails();
 				t.setId(rs.getInt(1));
-				t.setName(rs.getString(2));
-				t.setStatus(rs.getString(3));
-				t.setTodo(rs.getString(4));
+				t.setTodo(rs.getString(2));
+				t.setName(rs.getString(3));
+				t.setStatus(rs.getString(4));
 				list.add(t);
 			}
 			
@@ -82,9 +82,9 @@ public class TodoDAO {
 			while(rs.next()) {
 				t=new TodoDetails();
 				t.setId(rs.getInt(1));
-				t.setName(rs.getString(2));
-				t.setStatus(rs.getString(3));
-				t.setTodo(rs.getString(4));
+				t.setTodo(rs.getString(2));
+				t.setName(rs.getString(3));
+				t.setStatus(rs.getString(4));
 			}
 		} catch (Exception e) {
 			

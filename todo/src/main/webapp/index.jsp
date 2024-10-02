@@ -66,9 +66,9 @@ out.print(conn);
 				
 				<tr>
 					<td scope="row"><%=t.getId() %></td>
-					<td><%= t.getStatus() %></td>
-					<td scope="row"><%= t.getName() %></td>
-					<td><%=t.getTodo() %></td>
+					<td><%= t.getName() %></td>
+					<td scope="row"><%= t.getTodo() %></td>
+					<td><%=t.getStatus() %></td>
 					<td>
 						<a href="edit.jsp?id=<%=t.getId()%>" class="btn btn-sm btn-success">Edit</a>	
 							<a href="" class="btn btn-sm btn-danger">Delete</a>	

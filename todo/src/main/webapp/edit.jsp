@@ -35,12 +35,12 @@
 								<label for="exampleInputEmail1">Name</label> <input type="text"
 									class="form-control" id="exampleInputEmail1"
 									aria-describedby="emailHelp" placeholder="Aapka Naam"
-									value="<%=t.getStatus()%>" name="username">
+									value="<%=t.getName()%>" name="username">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Todo</label> <input type="text"
 									class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" value="<%=t.getName()%>"
+									aria-describedby="emailHelp" value="<%=t.getTodo()%>"
 									placeholder="Enter your Task..." name="todo">
 							</div>
 
@@ -51,7 +51,7 @@
 
 									<%
 									
-									if("Pending".equals(t.getTodo())){
+									if("Pending".equals(t.getStatus())){
 										%>
 									<option selected value="Pending">Pending</option>
 									<option value="Completed">Completed</option>

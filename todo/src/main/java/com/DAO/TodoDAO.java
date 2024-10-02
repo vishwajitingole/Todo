@@ -93,5 +93,47 @@ public class TodoDAO {
 		
 		return t;
 	}
+	public boolean updateTodoById(TodoDetails t) {
+		
+		boolean res=false;
+		
+		try {
+			String sql="update todo set todo=?, name=?,status=? where id=?";
+			PreparedStatement pst=conn.prepareStatement(sql);
+			pst.setString(1, t.getTodo());
+			pst.setString(2, t.getName());
+			pst.setString(3, t.getStatus());
+			pst.setInt(4, t.getId());
+			int a=pst.executeUpdate();
+			if(a==1) {
+				res=true;
+			}else {
+				System.out.print("Nhi chala bhai!!!");
+			}
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+		
+	}
+	public boolean deleteTodoById(int id) {
+		boolean res1=false;
+		try {
+			String sql="delete from todo where id=?";
+			PreparedStatement pst=conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			int f=pst.executeUpdate();
+			if(f==1) {
+				res1=true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res1;
+	}
 
 }

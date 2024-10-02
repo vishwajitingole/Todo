@@ -21,7 +21,7 @@
 				<div class="card">
 					<div class="card-body">
 
-						<form action="add_todo" method="post">
+						<form action="update" method="post">
 							<h1 class="text-center">Edit Todo</h1>
 
 							<% int id=Integer.parseInt(request.getParameter("id"));
@@ -29,6 +29,8 @@
 							TodoDetails t=dao.getTodoById(id);
 							
 							%>
+							
+							<input name="id" type="hidden" value="<%= t.getId() %>">
 
 
 							<div class="form-group">
@@ -75,7 +77,7 @@
 							</div>
 
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary">Add Task</button>
+								<button type="submit" class="btn btn-primary">Update Task</button>
 							</div>
 
 						</form>

@@ -71,7 +71,7 @@ out.print(conn);
 					<td><%=t.getStatus() %></td>
 					<td>
 						<a href="edit.jsp?id=<%=t.getId()%>" class="btn btn-sm btn-success">Edit</a>	
-							<a href="" class="btn btn-sm btn-danger">Delete</a>	
+							<a href="delete?id=<%=t.getId()%>"  class="btn btn-sm btn-danger">Delete</a>	
 					</td>
 				</tr>
 				<%
